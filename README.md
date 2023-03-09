@@ -10,6 +10,11 @@ docker rm <containerid>
 docker run --name promtail -d -v $(pwd):/mnt/config -v /var/log:/var/log --link loki grafana/promtail:2.7.4 -config.file=/mnt/config/promtail-config.yaml
 ```
 
+**Stop all running docker containers**
+```
+sudo docker rm -f $(docker ps -a -q)
+```
+
 # Questions
 what is LOKI?\
 Why LOKI?
